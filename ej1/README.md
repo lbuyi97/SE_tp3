@@ -1,4 +1,3 @@
-a)
 Lo que se pide es que según las definiciones y directivas que se le dan al preprocesador.
 Todo lo que esté dentro de una estructura como esta:
 ```
@@ -7,81 +6,68 @@ Todo lo que esté dentro de una estructura como esta:
 #endif
 ```
 
+● uartConfig( UART_USB, 115200 );
+Funciones invocadas: 'uartInit'; Chip_UART_Init; Chip_UART_SetBaud; Chip_UART_SetupFIFOS; Chip_UART_ReadByte; Chip_UART_TXEnable; Chip_SCU_PinMux; Chip_UART_SetRS485Flags; Chip_SCU_PinMux
+Archivo se encuentran: definido en 'sapi_uart.h' y desarrollada en 'sapi_uart.c'
+Descripción: Está defininada como 'uartInit', iniciliza la UART_USB con el baudrate indicado
+Hardware: incide sobre la UART_USB del micro/EDU-CIAA
 
-será compilado unicamente si X_MACRO ha sido definida.
+● adcConfig( ADC_ENABLE );
+Funciones invocadas: 'adcInit', Chip_ADC_Init; Chip_ADC_SetBurstCmd; Chip_ADC_SetSampleRate; Chip_ADC_EnableChannel; Chip_ADC_Int_SetChannelCmd; Chip_SCU_ADC_Channel_Config; Chip_ADC_DeInit
+Archivo se encuentran: definido en 'sapi_adc.h' y desarrollada en 'sapi_adc.c'
+Descripción: Está defininada como 'adcInit', iniciliza el ADC
+Hardware: activa el ADC interno del micro
 
-También se admiten estructuras de este tipo:
+● dacConfig( DAC_ENABLE );
+Funciones invocadas: 'dacInit', Chip_Clock_EnableOpts; Chip_DAC_SetBias; Chip_DAC_ConfigDAConverterControl; Chip_DAC_UpdateValue; Chip_DAC_DeInit
+Archivo se encuentran: definido en 'sapi_dac.h' y desarrollada en 'sapi_dac.c'
+Descripción: Está defininada como 'dacInit', iniciliza el DAC
+Hardware: activa el DAC interno del micro
 
-```
-#if X_MACRO == X_VALOR
-...
-#endif
-```
+● delayConfig( &delay, 500 );
+Funciones invocadas: 'delayInit'
+Archivo se encuentran: definido en 'sapi_delay.h' y desarrollada en 'sapi_delay.c'
+Descripción: Está defininada como 'delayInit', configura el valor del delay, que es una estructura 'delay_t'
+Hardware: 
 
-en las cuales será compilado el bloque si X_MACRO está definido y vale X_VALOR.
+● muestra = adcRead( CH1 );
+Funciones invocadas: Chip_ADC_EnableChannel; Chip_ADC_SetStartMode; Chip_ADC_ReadStatus; Chip_ADC_ReadValue; Chip_ADC_EnableChannel
+Archivo se encuentran: 'sapi_adc.c'
+Descripción: Manda a convertir el ADC y espera hasta que termine de convertir y ese valor lo devuelve por retorno a 'muestra'
+Hardware: Pone en acción al ADC del micro
 
-De esta manera se pueden tener varios bloques de códigos (o programas enteros) dentro de un mismo archivo y "elegir" con un #define cuales de los bloques se quieren compilar.
+● uartReadByte( UART_USB, &dato )
+Funciones invocadas: uartRxReady; uartRxRead;
+Archivo se encuentran: 'sapi_uart.c'
+Descripción: lee un byte que se encuentre en la UART_USB  y lo guarda en 'dato'
+Hardware: lee el RX de la UART_USB
 
-Ejemplo:
+● uartWriteByte( UART_USB, dato )
+Funciones invocadas: uartTxReady; uartTxWrite;
+Archivo se encuentran: 'sapi_uart.c'
+Descripción: lescibe un byte eb UART_USB con el valor 'dato'
+Hardware: escribe el TX de la UART_USB
 
-![This is an image](./pre.png)
+● uartWriteString( UART_USB, "ADC CH1 value: " );
+Funciones invocadas: uartWriteByte
+Archivo se encuentran: 'sapi_uart.c'
+Descripción: escribe todos los bytes (char) de una string en la UART_USB
+Hardware: escribe el TX de la UART_USB varias veces
 
+● dacWrite( DAC, muestra );
+Funciones invocadas: Chip_DAC_UpdateValue
+Archivo se encuentran:'sapi_dac.c'
+Descripción: escribe un valor en el DAC
+Hardware: setea un nivel de tensión en el DAC del micro
 
-b)
-Se ve a continuación una captura del código del archivo 'switches_led.c'
+● uartCallbackSet(UART_USB, UART_RECEIVE, onRx, NULL);
+Funciones invocadas: Chip_UART_IntEnable
+Archivo se encuentran: 'sapi_uart.c'
+Descripción: Setea un callback al evento de recepción y habilita su interrupción
+Hardware: 
 
-![This is an image](./ej2_01.png)
-
-Primero tenemos a la función 'gpioConfig' que tiene la siguiente definición en el archivo 'sapi_gpio.h'
-```
-#define gpioConfig  gpioInit
-```
-
-'gpioInit' es una función que está desarrollada en 'sapi_gpio.c' con el siguiente prototipo:
-```
-bool_t gpioInit( gpioMap_t pin, gpioInit_t config )
-```
-
-El tipo 'gpioMap_t' está declarado en 'sapi peripheral_map.h' como tipo enumerativo en la cual le da un nombre a cada pin según número.
-
-El tipo 'gpioInit_t' está declarado en 'sapi gpio.h' como tipo enumerativo en la cual le da un nombre a cada configuración posible de cada GPIO
-```
-typedef enum {
-   GPIO_INPUT, GPIO_OUTPUT,
-   GPIO_INPUT_PULLUP, GPIO_INPUT_PULLDOWN,
-   GPIO_INPUT_PULLUP_PULLDOWN,
-   GPIO_ENABLE
-} gpioInit_t;
-```
-
-Lo que hace 'gpioInit' es configurar el 'pin' con la configuración 'config'.
-
-La función 'gpioRead( gpioMap_t pin )' está desarrollada en el archivo 'sapi_gpio.c' y lo que hace el leer y devolver el estado del pin que se le pase como parámetro. Esto lo hace con la función 'Chip_GPIO_ReadPortBit' definida en 'gpio_18xx_43xx.h' cuyo código es: 
-```
-STATIC INLINE bool Chip_GPIO_ReadPortBit(LPC_GPIO_T *pGPIO, uint32_t port, uint8_t pin)
-{
-	return (bool) pGPIO->B[port][pin];
-}
-```
-La estructura 'LPC_GPIO_T' está definida también en 'gpio_18xx_43xx.h':
-```
-typedef struct {				/*!< GPIO_PORT Structure */
-	__IO uint8_t B[128][32];	/*!< Offset 0x0000: Byte pin registers ports 0 to n; pins PIOn_0 to PIOn_31 */
-	__IO uint32_t W[32][32];	/*!< Offset 0x1000: Word pin registers port 0 to n */
-	__IO uint32_t DIR[32];		/*!< Offset 0x2000: Direction registers port n */
-	__IO uint32_t MASK[32];		/*!< Offset 0x2080: Mask register port n */
-	__IO uint32_t PIN[32];		/*!< Offset 0x2100: Portpin register port n */
-	__IO uint32_t MPIN[32];		/*!< Offset 0x2180: Masked port register port n */
-	__IO uint32_t SET[32];		/*!< Offset 0x2200: Write: Set register for port n Read: output bits for port n */
-	__O  uint32_t CLR[32];		/*!< Offset 0x2280: Clear port n */
-	__O  uint32_t NOT[32];		/*!< Offset 0x2300: Toggle port n */
-} LPC_GPIO_T;
-```
-
-La función 'gpioWrite( gpioMap_t pin, bool_t value )' está desarrollada en el archivo 'sapi_gpio.c' y lo que hace es escribir el estado 'value' en el 'pin' que se le pase como parámetro. Esto lo hace con la función 'Chip_GPIO_SetPinState' definida en 'gpio_18xx_43xx.h' cuyo código es: 
-```
-STATIC INLINE void Chip_GPIO_SetPinState(LPC_GPIO_T *pGPIO, uint8_t port, uint8_t pin, bool setting)
-{
-	pGPIO->B[port][pin] = setting;
-}
-```
+● uartInterrupt(UART_USB, true);
+Funciones invocadas: uartInterrupt
+Archivo se encuentran: 'sapi_uart.c'
+Descripción: activa la interrupción de la UART_USB
+Hardware: activa o desactiva la interrupción del UART_USB
