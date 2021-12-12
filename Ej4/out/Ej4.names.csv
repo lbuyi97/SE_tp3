@@ -1,0 +1,313 @@
+TP3/Ej4/out/Ej4.elf:1a0019dc 000000c8 t uartProcessIRQ
+TP3/Ej4/out/Ej4.elf:10000114 00000004 b rxIsrCallbackUART0
+TP3/Ej4/out/Ej4.elf:10000118 00000004 b rxIsrCallbackUART0Params
+TP3/Ej4/out/Ej4.elf:1000011c 00000004 b rxIsrCallbackUART2
+TP3/Ej4/out/Ej4.elf:10000120 00000004 b rxIsrCallbackUART2Params
+TP3/Ej4/out/Ej4.elf:10000124 00000004 b rxIsrCallbackUART3
+TP3/Ej4/out/Ej4.elf:10000128 00000004 b rxIsrCallbackUART3Params
+TP3/Ej4/out/Ej4.elf:1000012c 00000004 b txIsrCallbackUART0
+TP3/Ej4/out/Ej4.elf:10000130 00000004 b txIsrCallbackUART0Params
+TP3/Ej4/out/Ej4.elf:10000134 00000004 b txIsrCallbackUART2
+TP3/Ej4/out/Ej4.elf:10000138 00000004 b txIsrCallbackUART2Params
+TP3/Ej4/out/Ej4.elf:1000013c 00000004 b txIsrCallbackUART3
+TP3/Ej4/out/Ej4.elf:10000140 00000004 b txIsrCallbackUART3Params
+TP3/Ej4/out/Ej4.elf:1a003ae4 00000048 t lpcUarts
+TP3/Ej4/out/Ej4.elf:10000004 00000038 d i2c
+TP3/Ej4/out/Ej4.elf:1000003c 00000004 d ClockSpeed
+TP3/Ej4/out/Ej4.elf:10000104 00000004 b callBackFuncParams
+TP3/Ej4/out/Ej4.elf:10000108 00000008 b tickCounter
+TP3/Ej4/out/Ej4.elf:10000110 00000004 b tickHookFunction
+TP3/Ej4/out/Ej4.elf:1a0017c4 00000002 t errorOcurred
+TP3/Ej4/out/Ej4.elf:1a0017c6 00000002 t doNothing
+TP3/Ej4/out/Ej4.elf:10000048 00000040 d timer_dd
+TP3/Ej4/out/Ej4.elf:1a003ab4 00000030 t timer_sd
+TP3/Ej4/out/Ej4.elf:1000008c 00000060 d impure_data
+TP3/Ej4/out/Ej4.elf:100000f4 00000004 b heap_end.0
+TP3/Ej4/out/Ej4.elf:1a0006bc 00000048 t Board_LED_Init
+TP3/Ej4/out/Ej4.elf:1a000704 00000044 t Board_TEC_Init
+TP3/Ej4/out/Ej4.elf:1a000748 00000044 t Board_GPIO_Init
+TP3/Ej4/out/Ej4.elf:1a00078c 00000030 t Board_ADC_Init
+TP3/Ej4/out/Ej4.elf:1a0007bc 00000038 t Board_SPI_Init
+TP3/Ej4/out/Ej4.elf:1a0007f4 00000024 t Board_I2C_Init
+TP3/Ej4/out/Ej4.elf:1a00385c 00000008 t GpioButtons
+TP3/Ej4/out/Ej4.elf:1a003864 0000000c t GpioLeds
+TP3/Ej4/out/Ej4.elf:1a003870 00000012 t GpioPorts
+TP3/Ej4/out/Ej4.elf:1a003888 00000004 t InitClkStates
+TP3/Ej4/out/Ej4.elf:1a00388c 00000074 t pinmuxing
+TP3/Ej4/out/Ej4.elf:1a00095c 00000014 t Chip_ADC_GetClockIndex
+TP3/Ej4/out/Ej4.elf:1a000970 00000032 t getClkDiv
+TP3/Ej4/out/Ej4.elf:1a000a38 000000a8 t pll_calc_divs
+TP3/Ej4/out/Ej4.elf:1a000ae0 00000110 t pll_get_frac
+TP3/Ej4/out/Ej4.elf:1a000bf0 00000054 t Chip_Clock_FindBaseClock
+TP3/Ej4/out/Ej4.elf:1a000e68 00000022 t Chip_Clock_GetDivRate
+TP3/Ej4/out/Ej4.elf:100000fc 00000008 b audio_usb_pll_freq
+TP3/Ej4/out/Ej4.elf:1a003908 0000006c t periph_to_base
+TP3/Ej4/out/Ej4.elf:1a001060 00000014 t Chip_SSP_GetClockIndex
+TP3/Ej4/out/Ej4.elf:1a001074 00000018 t Chip_SSP_GetPeriphClockIndex
+TP3/Ej4/out/Ej4.elf:1a003974 00000048 t InitClkStates
+TP3/Ej4/out/Ej4.elf:1a001270 0000002c t Chip_TIMER_GetClockIndex
+TP3/Ej4/out/Ej4.elf:1a0012c0 0000002c t Chip_UART_GetIndex
+TP3/Ej4/out/Ej4.elf:1a0039bc 00000008 t UART_BClock
+TP3/Ej4/out/Ej4.elf:1a0039c4 00000008 t UART_PClock
+TP3/Ej4/out/Ej4.elf:1a0014b0 00000038 t gpioObtainPinInit
+TP3/Ej4/out/Ej4.elf:10000144 00000004 b g_hUsb
+TP3/Ej4/out/Ej4.elf:1a001df0 0000000e t uartfd_write
+TP3/Ej4/out/Ej4.elf:1a001dfe 0000002e t uartfd_read
+TP3/Ej4/out/Ej4.elf:1a003b30 00000010 t uartfd_vtable
+TP3/Ej4/out/Ej4.elf:1a001e7c 000000b4 t StabilizePwmValues
+TP3/Ej4/out/Ej4.elf:1a001f30 00000058 t InitRgbFirstTime
+TP3/Ej4/out/Ej4.elf:1a001f88 00000140 t UpdateLedsStates
+TP3/Ej4/out/Ej4.elf:1000014c 00000063 b RgbLeds
+TP3/Ej4/out/Ej4.elf:100001af 00000001 b rgbInitialized.1
+TP3/Ej4/out/Ej4.elf:100001b0 00000004 b ticksCounter.0
+TP3/Ej4/out/Ej4.elf:1a002804 00000048 t std
+TP3/Ej4/out/Ej4.elf:1a0029b0 00000050 t fcwriter
+TP3/Ej4/out/Ej4.elf:1a002a00 00000038 t fccloser
+TP3/Ej4/out/Ej4.elf:1a002a38 00000036 t fcseeker
+TP3/Ej4/out/Ej4.elf:1a002a6e 00000036 t fcreader
+TP3/Ej4/out/Ej4.elf:1a002da4 0000002e t __sfputc_r
+TP3/Ej4/out/Ej4.elf:1a000304 d __init_array_end
+TP3/Ej4/out/Ej4.elf:1a000300 ? __preinit_array_end
+TP3/Ej4/out/Ej4.elf:1a000300 d __init_array_start
+TP3/Ej4/out/Ej4.elf:1a000300 ? __preinit_array_start
+TP3/Ej4/out/Ej4.elf:1a000c90 0000001c T Chip_Clock_GetDividerSource
+TP3/Ej4/out/Ej4.elf:1a000608 00000012 T _isatty_r
+TP3/Ej4/out/Ej4.elf:1a001954 00000044 T TIMER2_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a001c20 00000014 T uartRxRead
+TP3/Ej4/out/Ej4.elf:1a001cf8 0000001c T uartWriteByteArray
+TP3/Ej4/out/Ej4.elf:1a00061a 0000000a T _lseek_r
+TP3/Ej4/out/Ej4.elf:1a000184 00000002 W DebugMon_Handler
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W RIT_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a080000 A __top_MFlashA512
+TP3/Ej4/out/Ej4.elf:1a003280 0000006c T __sflags
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W ADCHS_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a000114 T __section_table_start
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W FLASH_EEPROM_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W I2C0_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a001cc4 0000001a T uartReadByte
+TP3/Ej4/out/Ej4.elf:1a0008ae 00000008 T __stdio_init
+TP3/Ej4/out/Ej4.elf:1a0030c6 00000024 T __sseek
+TP3/Ej4/out/Ej4.elf:1a0028b4 00000070 T __sinit
+TP3/Ej4/out/Ej4.elf:1a0030f4 000000a4 T __swbuf_r
+TP3/Ej4/out/Ej4.elf:1a00017a 00000002 W HardFault_Handler
+TP3/Ej4/out/Ej4.elf:1a002858 0000002c T __sfmoreglue
+TP3/Ej4/out/Ej4.elf:1a000000 A __vectors_start__
+TP3/Ej4/out/Ej4.elf:1a000a16 0000000c T Chip_ADC_SetResolution
+TP3/Ej4/out/Ej4.elf:1a00224c 00000014 T rgbReadDutyGreen
+TP3/Ej4/out/Ej4.elf:1a00346c 0000000c T __malloc_unlock
+TP3/Ej4/out/Ej4.elf:1a001798 0000002c T SysTick_Handler
+TP3/Ej4/out/Ej4.elf:1a001340 00000040 T Chip_UART_SetBaud
+TP3/Ej4/out/Ej4.elf:1a000564 00000002 W initialise_monitor_handles
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W SDIO_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a000850 0000001c T Board_UARTGetChar
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W ATIMER_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a000186 00000002 W PendSV_Handler
+TP3/Ej4/out/Ej4.elf:1a000178 00000002 W NMI_Handler
+TP3/Ej4/out/Ej4.elf:1a003be0 R __exidx_end
+TP3/Ej4/out/Ej4.elf:1a000150 T __data_section_table_end
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W I2C1_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W UART1_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a003274 0000000c T __errno
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W GPIO5_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W CAN1_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a0005fe 0000000a T _fstat_r
+TP3/Ej4/out/Ej4.elf:53ff7326 A __valid_user_code_checksum
+TP3/Ej4/out/Ej4.elf:1a003be0 R _etext
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W USB1_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W I2S0_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a001998 00000044 T TIMER3_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a000f10 0000000c T Chip_Clock_GetBaseClocktHz
+TP3/Ej4/out/Ej4.elf:1a0001bc 0000000a T UART0_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a0001a8 00000012 T bss_init
+TP3/Ej4/out/Ej4.elf:1a0012a8 00000018 T Chip_TIMER_Reset
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W SGPIO_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a00284c 0000000c T _cleanup_r
+TP3/Ej4/out/Ej4.elf:1a0022e8 T __aeabi_uldivmod
+TP3/Ej4/out/Ej4.elf:100001c0 B _noinit
+TP3/Ej4/out/Ej4.elf:100000f8 00000004 B SystemCoreClock
+TP3/Ej4/out/Ej4.elf:1a0012ec 00000054 T Chip_UART_Init
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W ADC0_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a000180 00000002 W UsageFault_Handler
+TP3/Ej4/out/Ej4.elf:1a000f8c 0000004c T Chip_Clock_GetRate
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W GPIO6_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a0008e4 0000006c T Board_SetupClocking
+TP3/Ej4/out/Ej4.elf:20008000 A __top_RamAHB32
+TP3/Ej4/out/Ej4.elf:1a002318 0000027a T __udivmoddi4
+TP3/Ej4/out/Ej4.elf:1a00069c 00000020 T _sbrk_r
+TP3/Ej4/out/Ej4.elf:1a003858 00000004 T ExtRateIn
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W IntDefaultHandler
+TP3/Ej4/out/Ej4.elf:1a000300 T __CRP_WORD_END__
+TP3/Ej4/out/Ej4.elf:100000f0 00000001 B flagToggle
+TP3/Ej4/out/Ej4.elf:1a000624 0000004e T _read_r
+TP3/Ej4/out/Ej4.elf:1a002b80 00000038 T fopencookie
+TP3/Ej4/out/Ej4.elf:1a002598 000000d8 T _fclose_r
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W GPIO1_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W SSP0_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a001bf0 00000018 T uartRxReady
+TP3/Ej4/out/Ej4.elf:1a003bd8 T __exidx_start
+TP3/Ej4/out/Ej4.elf:1a0002fc 00000004 T CRP_WORD
+TP3/Ej4/out/Ej4.elf:100001b6 00000001 B __lock___sinit_recursive_mutex
+TP3/Ej4/out/Ej4.elf:1a003ba0 00000004 T _global_impure_ptr
+TP3/Ej4/out/Ej4.elf:1a002bf8 00000048 T __libc_init_array
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W ADC1_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a00086c 00000030 T Board_Init
+TP3/Ej4/out/Ej4.elf:1a0005f2 00000002 W _init
+TP3/Ej4/out/Ej4.elf:1a000114 T __data_section_table
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W RTC_IRQHandler
+TP3/Ej4/out/Ej4.elf:100001c0 B _ebss
+TP3/Ej4/out/Ej4.elf:1a0018d4 00000040 T TIMER0_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a000568 00000088 T Reset_Handler
+TP3/Ej4/out/Ej4.elf:1a001724 00000074 T tickInit
+TP3/Ej4/out/Ej4.elf:20010000 A __top_RamAHB_ETB16
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W SPI_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a001024 0000003c T Chip_I2C_SetClockRate
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W LCD_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a000c44 0000004c T Chip_Clock_EnableCrystal
+TP3/Ej4/out/Ej4.elf:100001b4 00000001 B __lock___malloc_recursive_mutex
+TP3/Ej4/out/Ej4.elf:10008000 A __top_RamLoc32
+TP3/Ej4/out/Ej4.elf:1a00018a 0000001e T data_init
+TP3/Ej4/out/Ej4.elf:1a001914 00000040 T TIMER1_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a003b40 00000020 T __sf_fake_stderr
+TP3/Ej4/out/Ej4.elf:1a000ffc 00000028 T Chip_I2C_Init
+TP3/Ej4/out/Ej4.elf:1a002c46 00000002 T __retarget_lock_release_recursive
+TP3/Ej4/out/Ej4.elf:1a001d14 0000000a T UART2_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a000e00 00000068 T Chip_Clock_GetMainPLLHz
+TP3/Ej4/out/Ej4.elf:1a0039cc 000000e6 T gpioPinsInit
+TP3/Ej4/out/Ej4.elf:1a001aa4 00000090 T uartInterrupt
+TP3/Ej4/out/Ej4.elf:1a001cde 0000001a T uartWriteByte
+TP3/Ej4/out/Ej4.elf:1a00108c 00000012 T Chip_SSP_SetClockRate
+TP3/Ej4/out/Ej4.elf:1a002274 00000074 T rgbToggleLed
+TP3/Ej4/out/Ej4.elf:1a002dd2 00000024 T __sfputs_r
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W GPIO2_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a002884 0000000c T __sfp_lock_acquire
+TP3/Ej4/out/Ej4.elf:1a0033c0 T memchr
+TP3/Ej4/out/Ej4.elf:1a0017c8 00000104 T Timer_Init
+TP3/Ej4/out/Ej4.elf:1a002c58 00000098 T _free_r
+TP3/Ej4/out/Ej4.elf:1a0018cc 00000008 T Timer_microsecondsToTicks
+TP3/Ej4/out/Ej4.elf:1a000ee8 00000028 T Chip_Clock_GetBaseClock
+TP3/Ej4/out/Ej4.elf:100000f0 B _bss
+TP3/Ej4/out/Ej4.elf:1a0009e4 00000032 T Chip_ADC_SetSampleRate
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W I2S1_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a00109e 00000042 T Chip_SSP_SetBitRate
+TP3/Ej4/out/Ej4.elf:1a000fd8 00000002 T Chip_GPIO_Init
+TP3/Ej4/out/Ej4.elf:1a003884 00000004 T OscRateIn
+TP3/Ej4/out/Ej4.elf:1a001c48 0000007c T uartInit
+TP3/Ej4/out/Ej4.elf:100001c0 B _end_noinit
+TP3/Ej4/out/Ej4.elf:10008000 A _vStackTop
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W SSP1_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a00129c 0000000c T Chip_TIMER_Init
+TP3/Ej4/out/Ej4.elf:1a000178 T __bss_section_table_end
+TP3/Ej4/out/Ej4.elf:1a0005f4 0000000a T _close_r
+TP3/Ej4/out/Ej4.elf:1a0014e8 000001ac T gpioInit
+TP3/Ej4/out/Ej4.elf:1a002c42 00000002 T __retarget_lock_close_recursive
+TP3/Ej4/out/Ej4.elf:1a003198 000000dc T __swsetup_r
+TP3/Ej4/out/Ej4.elf:1a002594 00000002 W __aeabi_ldiv0
+TP3/Ej4/out/Ej4.elf:1a002924 0000008c T __sfp
+TP3/Ej4/out/Ej4.elf:1a0028a8 0000000c T __sinit_lock_release
+TP3/Ej4/out/Ej4.elf:1a00306c 00000022 T __sread
+TP3/Ej4/out/Ej4.elf:1a001d28 0000001c T USB0_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W GPIO3_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a003460 0000000c T __malloc_lock
+TP3/Ej4/out/Ej4.elf:1a00083c 00000014 T Board_UARTPutChar
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W SCT_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a00278c 00000078 T _fflush_r
+TP3/Ej4/out/Ej4.elf:1a003b60 00000020 T __sf_fake_stdin
+TP3/Ej4/out/Ej4.elf:1a000cac 0000001c T Chip_Clock_GetDividerDivisor
+TP3/Ej4/out/Ej4.elf:1a002238 00000014 T rgbReadDutyRed
+TP3/Ej4/out/Ej4.elf:1a0002fc T __CRP_WORD_START__
+TP3/Ej4/out/Ej4.elf:1a002c44 00000002 T __retarget_lock_acquire_recursive
+TP3/Ej4/out/Ej4.elf:1a002c48 00000010 T memset
+TP3/Ej4/out/Ej4.elf:1a00017c 00000002 W MemManage_Handler
+TP3/Ej4/out/Ej4.elf:1a000498 000000cc T main
+TP3/Ej4/out/Ej4.elf:1a0020c8 0000004c T rgbInit
+TP3/Ej4/out/Ej4.elf:1a002c40 00000002 T __retarget_lock_init_recursive
+TP3/Ej4/out/Ej4.elf:1a002260 00000014 T rgbReadDutyBlue
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W WDT_IRQHandler
+TP3/Ej4/out/Ej4.elf:2000c000 A __top_RamAHB16
+TP3/Ej4/out/Ej4.elf:1008a000 A __top_RamLoc40
+TP3/Ej4/out/Ej4.elf:1a000182 00000002 W SVC_Handler
+TP3/Ej4/out/Ej4.elf:1a0030ea 00000008 T __sclose
+TP3/Ej4/out/Ej4.elf:1a002670 00000010 T fclose
+TP3/Ej4/out/Ej4.elf:1a002cf0 000000b4 T _malloc_r
+TP3/Ej4/out/Ej4.elf:1a001c08 00000018 T uartTxReady
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W GPIO7_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a000f1c 0000003c T Chip_Clock_EnableOpts
+TP3/Ej4/out/Ej4.elf:1a0008a6 00000008 T __stdio_getchar
+TP3/Ej4/out/Ej4.elf:1a000cc8 000000b8 T Chip_Clock_GetClockInputHz
+TP3/Ej4/out/Ej4.elf:1a000d80 00000080 T Chip_Clock_CalcMainPLLValue
+TP3/Ej4/out/Ej4.elf:1a003058 00000014 T vfiprintf
+TP3/Ej4/out/Ej4.elf:1a00145c 00000038 T SystemInit
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W SPIFI_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a001db8 00000038 T delay
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W QEI_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a000150 T __bss_section_table
+TP3/Ej4/out/Ej4.elf:1a001694 0000006a T gpioWrite
+TP3/Ej4/out/Ej4.elf:1a0005f0 00000002 W _fini
+TP3/Ej4/out/Ej4.elf:1a0009a4 00000040 T Chip_ADC_Init
+TP3/Ej4/out/Ej4.elf:10000148 00000004 B g_pUsbApi
+TP3/Ej4/out/Ej4.elf:1a0008b8 0000002c T Board_SetupMuxing
+TP3/Ej4/out/Ej4.elf:1a001380 000000dc T Chip_UART_SetBaudFDR
+TP3/Ej4/out/Ej4.elf:1a001700 0000000c T tickRead
+TP3/Ej4/out/Ej4.elf:1a000672 00000028 T _write_r
+TP3/Ej4/out/Ej4.elf:10000040 00000008 D tickRateMS
+TP3/Ej4/out/Ej4.elf:10000000 00000001 D led_act
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W ETH_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a003478 000000da T _printf_common
+TP3/Ej4/out/Ej4.elf:10000088 00000004 D _impure_ptr
+TP3/Ej4/out/Ej4.elf:1a002680 0000010c T __sflush_r
+TP3/Ej4/out/Ej4.elf:10000000 ? _end_uninit_RESERVED
+TP3/Ej4/out/Ej4.elf:1b000000 T __core_m0app_START__
+TP3/Ej4/out/Ej4.elf:1a001c34 00000014 T uartTxWrite
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W CAN0_IRQHandler
+TP3/Ej4/out/Ej4.elf:10000000 D _data
+TP3/Ej4/out/Ej4.elf:1a002aa4 000000dc T _fopencookie_r
+TP3/Ej4/out/Ej4.elf:100001c0 B _pvHeapStart
+TP3/Ej4/out/Ej4.elf:1a000178 T __section_table_end
+TP3/Ej4/out/Ej4.elf:1a0010e0 00000038 T Chip_SSP_Init
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W GINT0_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a0032ec 0000004a T __swhatbuf_r
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W DAC_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a000818 00000024 T Board_Debug_Init
+TP3/Ej4/out/Ej4.elf:1a00089c 0000000a T __stdio_putchar
+TP3/Ej4/out/Ej4.elf:100000ec D _edata
+TP3/Ej4/out/Ej4.elf:1a000fdc 00000020 T Chip_I2C_EventHandler
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W M0SUB_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a001118 00000158 T Chip_SetupCoreClock
+TP3/Ej4/out/Ej4.elf:1a00308e 00000038 T __swrite
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W GPIO0_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a002df8 00000260 T _vfiprintf_r
+TP3/Ej4/out/Ej4.elf:1a000000 00000040 T g_pfnVectors
+TP3/Ej4/out/Ej4.elf:1a00220c 0000002c T rgbWriteRaw
+TP3/Ej4/out/Ej4.elf:1a002bb8 0000003e T _fwalk_reent
+TP3/Ej4/out/Ej4.elf:1a000a24 00000014 T SystemCoreClockUpdate
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W DMA_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W EVRT_IRQHandler
+TP3/Ej4/out/Ej4.elf:1b080000 A __top_MFlashB512
+TP3/Ej4/out/Ej4.elf:1a002890 0000000c T __sfp_lock_release
+TP3/Ej4/out/Ej4.elf:1a003b80 00000020 T __sf_fake_stdout
+TP3/Ej4/out/Ej4.elf:1a002594 00000002 W __aeabi_idiv0
+TP3/Ej4/out/Ej4.elf:1a001b34 000000bc T uartCallbackSet
+TP3/Ej4/out/Ej4.elf:1a00017e 00000002 W BusFault_Handler
+TP3/Ej4/out/Ej4.elf:1a003338 00000080 T __smakebuf_r
+TP3/Ej4/out/Ej4.elf:1a003554 0000024c T _printf_i
+TP3/Ej4/out/Ej4.elf:1a000f58 00000034 T Chip_Clock_Enable
+TP3/Ej4/out/Ej4.elf:1a001d1e 0000000a T UART3_IRQHandler
+TP3/Ej4/out/Ej4.elf:100001bc 00000004 B __malloc_sbrk_start
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W MCPWM_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W M0APP_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a001e2c 00000050 T stdioPrintf
+TP3/Ej4/out/Ej4.elf:1a001d44 00000074 T boardInit
+TP3/Ej4/out/Ej4.elf:100001b8 00000004 B __malloc_free_list
+TP3/Ej4/out/Ej4.elf:1a000040 000000d4 T g_pfnVendorVectors
+TP3/Ej4/out/Ej4.elf:1a002df8 00000260 T _vfprintf_r
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W GINT1_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a00170c 00000016 T tickPowerSet
+TP3/Ej4/out/Ej4.elf:1a000e8c 0000005c T Chip_Clock_SetBaseClock
+TP3/Ej4/out/Ej4.elf:1a003058 00000014 T vfprintf
+TP3/Ej4/out/Ej4.elf:1a001494 0000001c T cyclesCounterInit
+TP3/Ej4/out/Ej4.elf:1a0001ba 00000002 W GPIO4_IRQHandler
+TP3/Ej4/out/Ej4.elf:1a002114 000000f8 T rgbWriteColor
+TP3/Ej4/out/Ej4.elf:100001b5 00000001 B __lock___sfp_recursive_mutex
+TP3/Ej4/out/Ej4.elf:1a000310 00000188 T uartUSBreadHook
+TP3/Ej4/out/Ej4.elf:1a00289c 0000000c T __sinit_lock_acquire
+TP3/Ej4/out/Ej4.elf:1a000950 0000000c T Board_SystemInit
