@@ -10,7 +10,7 @@ uint8_t rgbReadDutyGreen( LedRgbMap_t rgbLed );
 uint8_t rgbReadDutyBlue( LedRgbMap_t rgbLed );
 ```
 
-Leen el duty cycle de cada uno de los tres LEDs que componen a "rgbLed".
+Las cuales leen el duty cycle de cada uno de los tres LEDs que componen a "rgbLed".
 
 ```c
 void rgbWriteRaw( LedRgbMap_t rgbLed, int8_t dutyRed, int8_t dutyGreen, int8_t dutyBlue );
