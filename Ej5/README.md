@@ -6,7 +6,7 @@ Como se indicó en el ejercicio, se fue observando como variaban los valores que
 
 ![Figura 2: Foto multímetro.](Ej5Mult.png)
 
-Observar que en la terminal decía 513, lo cual teniendo en cuenta la resolución de 10 bits y tensión de referencia de 3,3 $V$ se obtiene una tensión 1,65 $V$.
+Observar que en la terminal decía 513, lo cual teniendo en cuenta la resolución de 10 bits y tensión de referencia de 3,3 V se obtiene una tensión 1,65 V.
 
 Las funciones más importantes involucradas fueron:
 
@@ -15,7 +15,7 @@ void adcInit(adcInit_t config )
 
 ```
 
-Función que inicia el ADC con una frecuencia de muestreo de 200 $kHz$ y 10 bits de resolución. Dependiendo del valor del parámetro *config* se habilita o deshabilita.
+Función que inicia el ADC con una frecuencia de muestreo de 200 kHz y 10 bits de resolución. Dependiendo del valor del parámetro *config* se habilita o deshabilita.
 
 ```c
 uint16_t adcRead(adcMap_t analogInput )
