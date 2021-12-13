@@ -1,6 +1,6 @@
 # Ejercicio 6
 
-Este ejercicio, al igual que en el anterior, había que enviar a la terminal por USB las lecturas del ADC. La diferencia con el anterior es que en este caso el ADC estaba conectado mediante un resistor de 1 $k \Omega$ al DAC, y al DAC se lo configuraba con una tensión de 0 $V$ a 3,3 $V$ mediante las teclas del 0 al 9 de una computadora, donde 0 corresponde a 0 $V$ y 9 a 3,3 $V$. A continuación se muestra una figura con el resultado en la terminal, tocando las teclas del 0 al 9:
+Este ejercicio, al igual que en el anterior, había que enviar a la terminal por USB las lecturas del ADC. La diferencia con el anterior es que en este caso el ADC estaba conectado mediante un resistor de 1 kOhm al DAC, y al DAC se lo configuraba con una tensión de 0 V a 3,3 V mediante las teclas del 0 al 9 de una computadora, donde 0 corresponde a 0 V y 9 a 3,3 V. A continuación se muestra una figura con el resultado en la terminal, tocando las teclas del 0 al 9:
 
 ![Figura ADC-DAC por terminal](Ej6Terminal.png)
 
