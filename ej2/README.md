@@ -19,90 +19,24 @@ void uartInit( uartMap_t uart, uint32_t baudRate )
 Inicializa la UART "uart" con un baudrate de valor "baudRate".
 
 ```c
-void uartInterrupt(uartMap_t uart, bool_t enable)
+bool_t gpioRead( gpioMap_t pin )
 
 ```
 
-Habilita o deshabilita las interrupciones de la UART "uart" dependiendo del valor de "enable" (true o false). 
+Lee el estado de "pin", se usó para leer a los pulsadores.
 
 ```c
-void uartCallbackSet( uartMap_t uart, uartEvents_t event, callBackFuncPtr_t callbackFunc, void* callbackParam )
+bool_t gpioWrite( gpioMap_t pin, bool_t value )
 
 ```
-Setea la función a ser llamada cuando ocurre una interrupción de la UART "uart". La función a llamar es "callbackFunc" con parámetros "callbackParam" cuando hay algo para leer en el buffer o cuando la UART está lista para escribir dependiendo de los establecido por "event" (UART_RECEIVE o UART_TRANSMITER_FREE). Las funciones de callback seteadas para las UARTs en este caso fueron las siguientes: 
+
+Escribe el estado "value" en "pin", se usó para prender y apagar los LEDs.
 
 ```c
-void uartUSBreadHook(void *noUsado)
-{
-	static bool_t ledb_on = false;
-	static bool_t led1_on = false;
-	static bool_t led2_on = false;
-	static bool_t led3_on = false;
-	char uartReadBuff;
-
-	uartReadByte(UART_USB, &uartReadBuff);
-	switch(uartReadBuff)
-	{
-	  	 case 'B':
-	  		 if(!ledb_on)
-	  		 {
-	  			 gpioWrite( LEDB, true);
-	  			 ledb_on = true;
-	  		 }
-	  		 else
-	  		 {
-      			gpioWrite( LEDB, false);
-      			ledb_on = false;
-      		 }
-       		 break;
-       	 case '1':
-      		 if(!led1_on)
-      		 {
-       			 led1_on = true;
-       			 gpioWrite( LED1, true);
-		     }
-      		 else
-      		 {
-		     	 gpioWrite(LED1, false);
-		     	 led1_on = false;
-		     }
-		     break;
-		  case '2':
-			 if(!led2_on)
-		      {
-		          gpioWrite( LED2, true);
-		          led2_on = true;
-		      }
-		      else
-		      {
-		    	  gpioWrite( LED2, false);
-		          led2_on = false;
-		      }
-		      break;
-		   case '3':
-			   if(!led3_on)
-		       {
-				   gpioWrite( LED3, true);
-		            led3_on = true;
-		        }
-		        else
-		        {
-		        	gpioWrite( LED3, false);
-		        	led3_on = false;
-		        }
-		        break;
-		     default:
-		     	 break;
-		  }
-	uartWriteByte(UART_232, uartReadBuff);
-}
-```
-```c
-void uart232readHook(void *noUsado)
-{
-	char dato;
-	uartReadByte(UART_232, &dato);
-	uartWriteByte(UART_USB, dato);
-}
+void uartWriteByte( uartMap_t uart, const uint8_t value )
 
 ```
+
+Escribe el byte "value" en la "uart" que se le pase, se usó para enviar los caracteres a la terminal.
+
+El programa consiste en leer el estado de los botones, cada uno asignado a un LED distinto, y en el caso de estar pulsados, cambiar el estado del LED asociado a ese pulsador.
